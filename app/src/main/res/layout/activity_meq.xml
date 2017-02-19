@@ -1,0 +1,252 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:stretchColumns="0,1,2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtHeader"
+            android:text="Mineral"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/txtMilligram"
+            android:text="Milligrams"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TextView
+            android:id="@+id/txtmEq"
+            android:text="mEq"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+    <View
+        android:layout_height="1dip"
+        android:background="#000000" />
+    <!-- edittext span 2 column -->
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtCalcium"
+            android:text="Calcium"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgCalcium"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqCalcium"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <!-- just draw a red line -->
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtChlorine"
+            android:text="Chlorine"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgChlorine"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqChlorine"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtMagnesium"
+            android:text="Magnesium"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgMagnesium"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqMagnesium"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtPhosphorus"
+            android:text="Phosphorus"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgPhosphorus"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqPhosphorus"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtPotassium"
+            android:text="Potassium"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgPotassium"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqPotassium"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtSodium"
+            android:text="Sodium"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgSodium"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqSodium"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtSulfur"
+            android:text="Sulfur"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgSulfur"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqSulfur"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtSulfate"
+            android:text="Sulfate"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgSulfate"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqSulfate"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <TextView
+            android:id="@+id/txtZinc"
+            android:text="Zinc"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <EditText
+            android:id="@+id/mgZinc"
+            android:background="@drawable/edit_text_style"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+        <TextView
+            android:id="@+id/mEqZinc"
+            android:text="0"
+            android:paddingLeft="40dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </TableRow>
+
+    <View
+        android:layout_height="1dip"
+        android:background="#001aff" />
+    <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+        <Button
+            android:id="@+id/clear"
+            android:text="Clear All"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </TableRow>
+</TableLayout>
