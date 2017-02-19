@@ -17,6 +17,10 @@
         </activity>
         <activity android:name=".BMI" />
         <activity android:name=".BMR" />
+        <activity android:name=".Mifflin" />
+        <activity android:name=".Milligram" />
+        <activity android:name=".CSodium" />
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".BodyFatPercent"></activity>
     </application>
 
