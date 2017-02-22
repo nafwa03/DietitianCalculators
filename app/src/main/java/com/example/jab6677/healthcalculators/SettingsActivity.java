@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Checkable;
@@ -18,11 +19,13 @@ import android.widget.CheckBox;
 import android.widget.ToggleButton;
 
 
-public class SettingsActivity extends ActionBarActivity {
+public class SettingsActivity extends AppCompatActivity {
 
 	Checkable bmiCheck, bmrCheck, csodiumCheck;
     Switch mOnOffBMI;
     Switch mOnOffBMR;
+    Switch mOnOffCS;
+    Switch mOnOffMifflin;
 	Button mSubmitBtn;
 
 	public static final String MyPREFERENCES = "MyPrefs";
@@ -31,6 +34,8 @@ public class SettingsActivity extends ActionBarActivity {
 	public static final Boolean CSodium = true;
 	public static final String OnOffBMI = "BMIKey";
     public static final String OnOffBMR = "BMRKey";
+    public static final String OnOffCS = "CSKey";
+    public static final String OnOffMifflin = "MifflinKey";
 
 	SharedPreferences sharedpreferences;
 
@@ -54,8 +59,8 @@ public class SettingsActivity extends ActionBarActivity {
 		//csodiumCheck = (Checkable) findViewById(R.id.csodiumCheck);
         mOnOffBMI = (Switch) findViewById(R.id.onOffBMI);
         mOnOffBMR = (Switch) findViewById(R.id.onOffBMR);
-
-
+        mOnOffCS = (Switch) findViewById(R.id.onOffCS);
+        mOnOffMifflin = (Switch) findViewById(R.id.onOffMifflin);
         /*
         Step 3 : Get data from sharedpreference
           sharedpreferences.getString() method should be used to get the values for corresponding keys as shown below
@@ -66,6 +71,12 @@ public class SettingsActivity extends ActionBarActivity {
 		}
         if (sharedpreferences.contains(String.valueOf(OnOffBMR))) {
             mOnOffBMR.setChecked(sharedpreferences.getBoolean(OnOffBMR, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffCS))) {
+            mOnOffCS.setChecked(sharedpreferences.getBoolean(OnOffCS, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffMifflin))) {
+            mOnOffMifflin.setChecked(sharedpreferences.getBoolean(OnOffMifflin, false));
         }
 		/*
 		if (sharedpreferences.contains(Email)) {
@@ -99,8 +110,8 @@ public class SettingsActivity extends ActionBarActivity {
 				*/
 				Boolean onoffBMI = mOnOffBMI.isChecked();
                 Boolean onoffBMR = mOnOffBMR.isChecked();
-
-
+                Boolean onoffCS = mOnOffCS.isChecked();
+                Boolean onoffMifflin = mOnOffMifflin.isChecked();
 
 
                 /*
@@ -115,6 +126,8 @@ public class SettingsActivity extends ActionBarActivity {
 				//editor.putString(Password, pw);
 				editor.putBoolean(OnOffBMI, onoffBMI);
                 editor.putBoolean(OnOffBMR, onoffBMR);
+                editor.putBoolean(OnOffCS, onoffCS);
+                editor.putBoolean(OnOffMifflin, onoffMifflin);
 				//editor.putString(ConfirmPassword, cpw);
 				editor.apply();
 

@@ -3,7 +3,6 @@ package com.example.jab6677.healthcalculators;
 import android.content.Intent;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,15 +10,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private SharedPreferences savedValues;
-    private SharedPreferences prefs;
     private boolean showBMI = true;
+    private boolean showBMR = true;
+    private boolean showCS = true;
+    private boolean showMifflin = true;
     public static final String MyPREFERENCES = "MyPrefs";
-
+    //TODO: Create visibility function
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,16 +27,18 @@ public class MainActivity extends AppCompatActivity {
         //SharedPreferences pref = getApplicationContext().getSharedPreferences("preferences_calculators", 0); // 0 - for private mode
         SharedPreferences sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
-        /*
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("bmiLogo", true); // Storing boolean - true/false
-        editor.commit(); // commit changes
-        */
+
         showBMI = sharedpreferences.getBoolean("BMIKey",false); // getting boolean
+        showBMR = sharedpreferences.getBoolean("BMRKey",false); // getting boolean
+        showCS = sharedpreferences.getBoolean("CSKey",false); // getting boolean
+        showMifflin = sharedpreferences.getBoolean("MifflinKey",false); // getting boolean
         Log.d("BMI is", String.valueOf(showBMI));
 
 
             Button bmrButton = (Button) findViewById(R.id.bmrButton);
+        if(!showBMR) {
+            bmrButton.setVisibility(View.GONE);
+        }
             bmrButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -67,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button mifflinButton = (Button) findViewById(R.id.mifflinBtn);
+        if(!showMifflin) {
+            mifflinButton.setVisibility(View.GONE);
+        }
         mifflinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button cSodiumButton = (Button) findViewById(R.id.cSodiumButton);
+        if(!showCS) {
+            cSodiumButton.setVisibility(View.GONE);
+        }
         cSodiumButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.menu_settings:
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this,SettingsActivity.class);
                 startActivity(intent);
                 return true;
@@ -117,18 +124,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-/*
-    @Override
-    public void onPause() {
-        // save the instance variables
-        SharedPreferences.Editor editor = savedValues.edit();
-        editor.putBoolean("bmiLogo", showBMI);
-        //editor.putFloat("tipPercent", tipPercent);
-        editor.apply();
-
-        super.onPause();
-
-        Log.d("SAVED VALUES", "onPause executed");
-    }
-*/
 }

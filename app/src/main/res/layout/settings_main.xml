@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:padding="5dp"
-                android:text="Off/On"
+                android:text="@string/off_on"
                  />
 
         </LinearLayout>
@@ -67,7 +67,70 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:padding="5dp"
-                android:text="Off/On"
+                android:text="@string/off_on"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:text="@string/corrected_sodium"
+                />
+
+            <Switch
+                android:id="@+id/onOffCS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="@string/off_on"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:text="@string/mifflin"
+                />
+
+            <Switch
+                android:id="@+id/onOffMifflin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="@string/off_on"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:text="@string/milligrams_to_meq"
+                />
+
+            <Switch
+                android:id="@+id/onOffmeq"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="@string/off_on"
                 />
 
         </LinearLayout>
@@ -76,7 +139,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Submit"
+            android:text="@string/submit"
             tools:text="Submit" />
 
     </LinearLayout>
