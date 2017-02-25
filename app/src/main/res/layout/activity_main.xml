@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jab6677.healthcalculators.MainActivity">
+    tools:context="com.example.nafwa03.dietitiancalculators.MainActivity">
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
@@ -67,21 +67,21 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Milligram to mEq" />
+            android:text="@string/milligram_to_meq" />
 
         <Button
             android:id="@+id/hamwiBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Hamwi IBW" />
+            android:text="@string/hamwi_ibw" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/ccalciumBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Button" />
+            android:text="@string/corrected_calcium" />
 
         <Button
             android:id="@+id/button10"

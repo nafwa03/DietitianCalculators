@@ -44,4 +44,28 @@
     <string name="pref_unit_default" translatable="false">metric</string>
     <string name="pref_unit_imperial">imperial</string>
     <string name="pref_unit_metric">metric</string>
+    <string name="zinc">Zinc</string>
+    <string name="clear_all">Clear All</string>
+    <string name="_0">0</string>
+    <string name="sulfate">Sulfate</string>
+    <string name="sulfur">Sulfur</string>
+    <string name="potassium">Potassium</string>
+    <string name="phosphorus">Phosphorus</string>
+    <string name="magnesium">Magnesium</string>
+    <string name="chlorine">Chlorine</string>
+    <string name="calcium">Calcium</string>
+    <string name="meq">mEq</string>
+    <string name="milligrams">Milligrams</string>
+    <string name="mineral">Mineral</string>
+    <string name="submit">Submit</string>
+    <string name="off_on">Off/On</string>
+    <string name="corrected_sodium">Corrected Sodium</string>
+    <string name="milligrams_to_meq">Milligrams to mEq</string>
+    <string name="corrected_calcium">Corrected Calcium</string>
+    <string name="albumin">Albumin</string>
+    <string name="g_dl">g/dL</string>
+    <string name="mg_dl">mg/dL</string>
+    <string name="milligram_to_meq">Milligram to mEq</string>
+    <string name="hamwi_ibw">Hamwi IBW</string>
+    <string name="small_frame">Small Frame</string>
 </resources>
