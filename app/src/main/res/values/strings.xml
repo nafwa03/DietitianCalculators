@@ -68,4 +68,10 @@
     <string name="milligram_to_meq">Milligram to mEq</string>
     <string name="hamwi_ibw">Hamwi IBW</string>
     <string name="small_frame">Small Frame</string>
+    <string name="vitamin_d_conversion">Vitamin D Conversion</string>
+    <string name="iu_to_ug">IU to ug</string>
+    <string name="ug_to_iu">ug to IU</string>
+    <string name="vitamin_d">Vitamin D</string>
+    <string name="iu">IU</string>
+    <string name="ug">ug</string>
 </resources>

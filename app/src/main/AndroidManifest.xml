@@ -17,6 +17,7 @@
         </activity>
         <activity android:name="com.example.nafwa03.dietitiancalculators.BMI" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.IBW" />
+        <activity android:name="com.example.nafwa03.dietitiancalculators.VitD" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.BMR" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.Mifflin" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.Milligram" />

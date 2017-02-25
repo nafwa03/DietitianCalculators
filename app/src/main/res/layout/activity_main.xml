@@ -84,11 +84,11 @@
             android:text="@string/corrected_calcium" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/vitDBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Button" />
+            android:text="@string/vitamin_d_conversion" />
 
         <Button
             android:id="@+id/button11"

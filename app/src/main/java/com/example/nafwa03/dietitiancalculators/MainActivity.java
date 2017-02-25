@@ -117,6 +117,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button vitDButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.vitDBtn);
+        vitDButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), VitD.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
