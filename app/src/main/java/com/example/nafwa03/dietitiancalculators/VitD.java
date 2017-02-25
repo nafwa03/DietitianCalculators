@@ -56,7 +56,7 @@ public class VitD extends AppCompatActivity {
                     resultArea.setText(vitDconversion + unit);
                 }
                 catch (Exception a){
-                    resultArea.setText("Must enter proper values for height and weight.");
+                    resultArea.setText("Must enter proper vitamin D value.");
                 }
 
             }
