@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button ibwButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.hamwiBtn);
+        Button ibwButton = (Button) findViewById(R.id.hamwiBtn);
         ibwButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button vitDButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.vitDBtn);
+        Button vitDButton = (Button) findViewById(R.id.vitDBtn);
         vitDButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,11 +126,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button nbalanceButton = (Button) findViewById(R.id.nbalanceBtn);
+        nbalanceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), NBalance.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(com.example.nafwa03.dietitiancalculators.R.menu.activity_main, menu);
+        getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
 

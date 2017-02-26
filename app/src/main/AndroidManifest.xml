@@ -22,6 +22,7 @@
         <activity android:name="com.example.nafwa03.dietitiancalculators.Mifflin" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.Milligram" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.CSodium" />
+        <activity android:name="com.example.nafwa03.dietitiancalculators.NBalance" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.CCalcium" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.SettingsActivity" />
         <activity android:name="com.example.nafwa03.dietitiancalculators.BodyFatPercent"></activity>

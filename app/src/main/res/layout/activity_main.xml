@@ -91,11 +91,11 @@
             android:text="@string/vitamin_d_conversion" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/nbalanceBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Button" />
+            android:text="@string/nitrogen_balance" />
 
         <Button
             android:id="@+id/button12"

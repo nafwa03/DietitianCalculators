@@ -74,4 +74,8 @@
     <string name="vitamin_d">Vitamin D</string>
     <string name="iu">IU</string>
     <string name="ug">ug</string>
+    <string name="nitrogen_balance">Nitrogen Balance</string>
+    <string name="_24_hour_protein_intake">24 Hour Protein Intake</string>
+    <string name="grams">grams</string>
+    <string name="_24_hour_urinary_urea_nitrogen">24 Hour Urinary Urea Nitrogen</string>
 </resources>
