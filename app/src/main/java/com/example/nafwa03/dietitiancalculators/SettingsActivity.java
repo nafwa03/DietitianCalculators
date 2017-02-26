@@ -20,6 +20,11 @@ public class SettingsActivity extends AppCompatActivity {
     Switch mOnOffBMR;
     Switch mOnOffCS;
     Switch mOnOffMifflin;
+    Switch mOnOffMilligram;
+    Switch mOnOffCC;
+    Switch mOnOffVitD;
+    Switch mOnOffIBW;
+    Switch mOnOffNB;
 	Button mSubmitBtn;
 
 	public static final String MyPREFERENCES = "MyPrefs";
@@ -29,6 +34,11 @@ public class SettingsActivity extends AppCompatActivity {
 	public static final String OnOffBMI = "BMIKey";
     public static final String OnOffBMR = "BMRKey";
     public static final String OnOffCS = "CSKey";
+    public static final String OnOffCC = "CCKey";
+    public static final String OnOffmeq = "MilligramKey";
+    public static final String OnOffNB = "NBKey";
+    public static final String OnOffIBW = "IBWKey";
+    public static final String OnOffVitD = "VitDKey";
     public static final String OnOffMifflin = "MifflinKey";
 
 	SharedPreferences sharedpreferences;
@@ -55,6 +65,11 @@ public class SettingsActivity extends AppCompatActivity {
         mOnOffBMR = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffBMR);
         mOnOffCS = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffCS);
         mOnOffMifflin = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffMifflin);
+        mOnOffCC = (Switch) findViewById(R.id.onOffCC);
+        mOnOffMilligram = (Switch) findViewById(R.id.onOffmeq);
+        mOnOffNB = (Switch) findViewById(R.id.onOffNB);
+        mOnOffIBW = (Switch) findViewById(R.id.onOffIBW);
+        mOnOffVitD = (Switch) findViewById(R.id.onOffVitD);
         /*
         Step 3 : Get data from sharedpreference
           sharedpreferences.getString() method should be used to get the values for corresponding keys as shown below
@@ -68,6 +83,21 @@ public class SettingsActivity extends AppCompatActivity {
         }
         if (sharedpreferences.contains(String.valueOf(OnOffCS))) {
             mOnOffCS.setChecked(sharedpreferences.getBoolean(OnOffCS, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffCC))) {
+            mOnOffCC.setChecked(sharedpreferences.getBoolean(OnOffCC, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffmeq))) {
+            mOnOffMilligram.setChecked(sharedpreferences.getBoolean(OnOffmeq, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffNB))) {
+            mOnOffNB.setChecked(sharedpreferences.getBoolean(OnOffNB, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffIBW))) {
+            mOnOffIBW.setChecked(sharedpreferences.getBoolean(OnOffIBW, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffVitD))) {
+            mOnOffVitD.setChecked(sharedpreferences.getBoolean(OnOffVitD, false));
         }
         if (sharedpreferences.contains(String.valueOf(OnOffMifflin))) {
             mOnOffMifflin.setChecked(sharedpreferences.getBoolean(OnOffMifflin, false));
@@ -106,8 +136,11 @@ public class SettingsActivity extends AppCompatActivity {
                 Boolean onoffBMR = mOnOffBMR.isChecked();
                 Boolean onoffCS = mOnOffCS.isChecked();
                 Boolean onoffMifflin = mOnOffMifflin.isChecked();
-
-
+                Boolean onoffCC = mOnOffCC.isChecked();
+                Boolean onoffMilligram = mOnOffMilligram.isChecked();
+                Boolean onoffIBW = mOnOffIBW.isChecked();
+                Boolean onoffNB = mOnOffNB.isChecked();
+                Boolean onoffVitD = mOnOffVitD.isChecked();
                 /*
                 Step 2 : Save object to sharedpreferences
          We can save data to sharedpreferences using SharedPreferences.Editor class, for which we need to use edit method of the shared preference.
@@ -121,6 +154,11 @@ public class SettingsActivity extends AppCompatActivity {
 				editor.putBoolean(OnOffBMI, onoffBMI);
                 editor.putBoolean(OnOffBMR, onoffBMR);
                 editor.putBoolean(OnOffCS, onoffCS);
+                editor.putBoolean(OnOffCC, onoffCC);
+                editor.putBoolean(OnOffmeq, onoffMilligram);
+                editor.putBoolean(OnOffNB, onoffNB);
+                editor.putBoolean(OnOffIBW, onoffIBW);
+                editor.putBoolean(OnOffVitD, onoffVitD);
                 editor.putBoolean(OnOffMifflin, onoffMifflin);
 				//editor.putString(ConfirmPassword, cpw);
 				editor.apply();

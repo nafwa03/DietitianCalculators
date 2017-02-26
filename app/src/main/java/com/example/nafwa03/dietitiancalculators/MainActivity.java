@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private boolean showBMR = true;
     private boolean showCS = true;
     private boolean showMifflin = true;
+    private boolean showMilligram = true;
+    private boolean showCC = true;
+    private boolean showIBW = true;
+    private boolean showNB = true;
+    private boolean showVitD = true;
     public static final String MyPREFERENCES = "MyPrefs";
     //TODO: Create visibility function
     @Override
@@ -32,7 +37,11 @@ public class MainActivity extends AppCompatActivity {
         showBMR = sharedpreferences.getBoolean("BMRKey",false); // getting boolean
         showCS = sharedpreferences.getBoolean("CSKey",false); // getting boolean
         showMifflin = sharedpreferences.getBoolean("MifflinKey",false); // getting boolean
-        Log.d("BMI is", String.valueOf(showBMI));
+        showCC = sharedpreferences.getBoolean("CCKey",false);
+        showMilligram = sharedpreferences.getBoolean("MilligramKey",false);
+        showIBW = sharedpreferences.getBoolean("IBWKey",false);
+        showNB = sharedpreferences.getBoolean("NBKey",false);
+        showVitD = sharedpreferences.getBoolean("VitDKey",false);
 
 
             Button bmrButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.bmrButton);
@@ -92,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button milligramButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.milligramBtn);
+        if(!showMilligram) {
+            milligramButton.setVisibility(View.GONE);
+        }
         milligramButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +113,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button cCalciumButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.ccalciumBtn);
+        if(!showCC) {
+            cCalciumButton.setVisibility(View.GONE);
+        }
         cCalciumButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button ibwButton = (Button) findViewById(R.id.hamwiBtn);
+        if(!showIBW) {
+            ibwButton.setVisibility(View.GONE);
+        }
         ibwButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,6 +137,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button vitDButton = (Button) findViewById(R.id.vitDBtn);
+        if(!showVitD) {
+            vitDButton.setVisibility(View.GONE);
+        }
         vitDButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,6 +149,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button nbalanceButton = (Button) findViewById(R.id.nbalanceBtn);
+        if(!showNB) {
+            nbalanceButton.setVisibility(View.GONE);
+        }
         nbalanceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
