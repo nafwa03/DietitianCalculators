@@ -7,11 +7,12 @@ Corrected Sodium,
 Mifflin St Jeor,
 Milligrams to mEq,
 Hamwi,
-Corrected Calcium
+Corrected Calcium,
+Vitamin D IU to ug and ug to IU
 
 Upcoming:
 BSA,
 mEq to Milligram,
-Vitamin D and Retinol conversion,
+Retinol conversion,
 More..
 
