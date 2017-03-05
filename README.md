@@ -9,7 +9,9 @@ Milligrams to mEq,
 Hamwi,
 Corrected Calcium,
 Vitamin D IU to ug and ug to IU,
-Nitrogen Balance
+Nitrogen Balance,
+Adjusted Body Weight,
+Schofield Equation
 
 Upcoming:
 BSA,
