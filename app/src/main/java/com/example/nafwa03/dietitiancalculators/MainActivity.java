@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean showIBW = true;
     private boolean showNB = true;
     private boolean showVitD = true;
+    private boolean showABW = true;
+    private boolean showSchofield = true;
     public static final String MyPREFERENCES = "MyPrefs";
     //TODO: Create visibility function
     @Override
@@ -42,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         showIBW = sharedpreferences.getBoolean("IBWKey",false);
         showNB = sharedpreferences.getBoolean("NBKey",false);
         showVitD = sharedpreferences.getBoolean("VitDKey",false);
-
+        showABW = sharedpreferences.getBoolean("ABWKey",false); // getting boolean
+        showSchofield = sharedpreferences.getBoolean("SchofieldKey",false); // getting boolean
 
             Button bmrButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.bmrButton);
         if(!showBMR) {
@@ -156,6 +159,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), NBalance.class);
+                startActivity(intent);
+            }
+        });
+
+        Button adjBWButton = (Button) findViewById(R.id.adjBWBtn);
+        if(!showABW) {
+            adjBWButton.setVisibility(View.GONE);
+        }
+        adjBWButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AdjBodyWeight.class);
+                startActivity(intent);
+            }
+        });
+
+        Button schofieldButton = (Button) findViewById(R.id.schofieldBtn);
+        if(!showSchofield) {
+            schofieldButton.setVisibility(View.GONE);
+        }
+        schofieldButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Schofield.class);
                 startActivity(intent);
             }
         });

@@ -8,24 +8,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.nafwa03.dietitiancalculators.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.nafwa03.dietitiancalculators.BMI" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.IBW" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.VitD" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.BMR" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.Mifflin" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.Milligram" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.CSodium" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.NBalance" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.CCalcium" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.SettingsActivity" />
-        <activity android:name="com.example.nafwa03.dietitiancalculators.BodyFatPercent"></activity>
+        <activity android:name=".BMI" />
+        <activity android:name=".IBW" />
+        <activity android:name=".VitD" />
+        <activity android:name=".BMR" />
+        <activity android:name=".Mifflin" />
+        <activity android:name=".Milligram" />
+        <activity android:name=".CSodium" />
+        <activity android:name=".NBalance" />
+        <activity android:name=".CCalcium" />
+        <activity android:name=".AdjBodyWeight" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".BodyFatPercent" />
+        <activity android:name=".Schofield">
+        </activity>
     </application>
 
 </manifest>

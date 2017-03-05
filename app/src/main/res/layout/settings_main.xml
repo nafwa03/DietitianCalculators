@@ -219,6 +219,48 @@
                 />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:text="@string/adjusted_body_weight"
+                />
+
+            <Switch
+                android:id="@+id/onOffadjBW"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="@string/off_on"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:padding="5dp"
+                android:text="@string/schofield_equation"
+                />
+
+            <Switch
+                android:id="@+id/onOffSchofield"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="@string/off_on"
+                />
+
+        </LinearLayout>
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="fill_parent"

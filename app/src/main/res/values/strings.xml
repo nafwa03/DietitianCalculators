@@ -78,4 +78,12 @@
     <string name="_24_hour_protein_intake">24 Hour Protein Intake</string>
     <string name="grams">grams</string>
     <string name="_24_hour_urinary_urea_nitrogen">24 Hour Urinary Urea Nitrogen</string>
+    <string name="adjusted_body_weight">Adjusted Body Weight</string>
+    <string name="actual_body_weight">Actual Body Weight</string>
+    <string name="ideal_body_weight">Ideal Body Weight</string>
+    <string name="schofield_equation">Schofield Equation</string>
+    <string name="_3_years"><![CDATA[< 3]]></string>
+    <string name="_3_10">3-10</string>
+    <string name="_10_18">10-18</string>
+    <string name="_18_30">18-30</string>
 </resources>

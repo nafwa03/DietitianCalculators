@@ -20,11 +20,13 @@ public class SettingsActivity extends AppCompatActivity {
     Switch mOnOffBMR;
     Switch mOnOffCS;
     Switch mOnOffMifflin;
+    Switch mOnOffSchofield;
     Switch mOnOffMilligram;
     Switch mOnOffCC;
     Switch mOnOffVitD;
     Switch mOnOffIBW;
     Switch mOnOffNB;
+    Switch mOnOffABW;
 	Button mSubmitBtn;
 
 	public static final String MyPREFERENCES = "MyPrefs";
@@ -39,7 +41,9 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String OnOffNB = "NBKey";
     public static final String OnOffIBW = "IBWKey";
     public static final String OnOffVitD = "VitDKey";
+    public static final String OnOffABW = "ABWKey";
     public static final String OnOffMifflin = "MifflinKey";
+    public static final String OnOffSchofield = "SchofieldKey";
 
 	SharedPreferences sharedpreferences;
 
@@ -61,15 +65,17 @@ public class SettingsActivity extends AppCompatActivity {
 		//bmiCheck = (Checkable) findViewById(R.id.bmiCheck);
 		//bmrCheck = (Checkable) findViewById(R.id.bmrCheck);
 		//csodiumCheck = (Checkable) findViewById(R.id.csodiumCheck);
-        mOnOffBMI = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffBMI);
-        mOnOffBMR = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffBMR);
-        mOnOffCS = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffCS);
-        mOnOffMifflin = (Switch) findViewById(com.example.nafwa03.dietitiancalculators.R.id.onOffMifflin);
+        mOnOffBMI = (Switch) findViewById(R.id.onOffBMI);
+        mOnOffBMR = (Switch) findViewById(R.id.onOffBMR);
+        mOnOffCS = (Switch) findViewById(R.id.onOffCS);
+        mOnOffMifflin = (Switch) findViewById(R.id.onOffMifflin);
+        mOnOffSchofield = (Switch) findViewById(R.id.onOffSchofield);
         mOnOffCC = (Switch) findViewById(R.id.onOffCC);
         mOnOffMilligram = (Switch) findViewById(R.id.onOffmeq);
         mOnOffNB = (Switch) findViewById(R.id.onOffNB);
         mOnOffIBW = (Switch) findViewById(R.id.onOffIBW);
         mOnOffVitD = (Switch) findViewById(R.id.onOffVitD);
+        mOnOffABW = (Switch) findViewById(R.id.onOffadjBW);
         /*
         Step 3 : Get data from sharedpreference
           sharedpreferences.getString() method should be used to get the values for corresponding keys as shown below
@@ -101,6 +107,12 @@ public class SettingsActivity extends AppCompatActivity {
         }
         if (sharedpreferences.contains(String.valueOf(OnOffMifflin))) {
             mOnOffMifflin.setChecked(sharedpreferences.getBoolean(OnOffMifflin, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffABW))) {
+            mOnOffABW.setChecked(sharedpreferences.getBoolean(OnOffABW, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffSchofield))) {
+            mOnOffSchofield.setChecked(sharedpreferences.getBoolean(OnOffSchofield, false));
         }
 		/*
 		if (sharedpreferences.contains(Email)) {
@@ -141,6 +153,8 @@ public class SettingsActivity extends AppCompatActivity {
                 Boolean onoffIBW = mOnOffIBW.isChecked();
                 Boolean onoffNB = mOnOffNB.isChecked();
                 Boolean onoffVitD = mOnOffVitD.isChecked();
+                Boolean onoffABW = mOnOffABW.isChecked();
+                Boolean onoffSchofield = mOnOffSchofield.isChecked();
                 /*
                 Step 2 : Save object to sharedpreferences
          We can save data to sharedpreferences using SharedPreferences.Editor class, for which we need to use edit method of the shared preference.
@@ -160,6 +174,8 @@ public class SettingsActivity extends AppCompatActivity {
                 editor.putBoolean(OnOffIBW, onoffIBW);
                 editor.putBoolean(OnOffVitD, onoffVitD);
                 editor.putBoolean(OnOffMifflin, onoffMifflin);
+                editor.putBoolean(OnOffABW, onoffABW);
+                editor.putBoolean(OnOffSchofield, onoffSchofield);
 				//editor.putString(ConfirmPassword, cpw);
 				editor.apply();
 

@@ -98,18 +98,18 @@
             android:text="@string/nitrogen_balance" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/adjBWBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Button" />
+            android:text="@string/adjusted_body_weight" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/schofieldBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Button" />
+            android:text="@string/schofield_equation" />
 
         <Button
             android:id="@+id/button14"
