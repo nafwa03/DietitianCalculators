@@ -1,17 +1,34 @@
 # DietitianCalculators
 Rewriting all my javascript dietitian calculators on my website nafwa.org to an android app. Ability to set which calculators user wants with sharedpreferences. If you have an idea for a calculator or plan to use this please let me know. I would like to create something useful. 
 
+Things for Learners:
+<br>
+<b>Android Sharedpreferences</b>
+<br>
+<b>Calculations useful to dietitians</b>
+<br><br>
 Completed Calculators:
-BMI,
-Corrected Sodium,
-Mifflin St Jeor,
-Milligrams to mEq,
-Hamwi,
-Corrected Calcium,
-Vitamin D IU to ug and ug to IU,
-Nitrogen Balance,
-Adjusted Body Weight,
+<br>
+BMI
+<br>
+Corrected Sodium
+<br>
+Mifflin St Jeor
+<br>
+Milligrams to mEq
+<br>
+Hamwi Ideal Body Weight (IBW)
+<br>
+Corrected Calcium
+<br>
+Vitamin D IU to ug and ug to IU
+<br>
+Nitrogen Balance
+<br>
+Adjusted Body Weight
+<br>
 Schofield Equation
+<br>
 
 Upcoming:
 BSA,
