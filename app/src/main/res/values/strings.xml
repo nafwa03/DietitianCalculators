@@ -87,4 +87,11 @@
     <string name="_10_18">10-18</string>
     <string name="_18_30">18-30</string>
     <string name="grams_ounce_conversion">Grams/Ounce Conversion</string>
+    <string name="ounce_to_grams">Ounce to Grams</string>
+    <string name="grams_to_ounces">Grams to Ounces</string>
+    <string name="value">Value</string>
+    <string name="ounces">Ounces</string>
+    <string name="amount">Amount</string>
+    <string name="world_health_organization_equation">World Health Organization Equation</string>
+    <string name="_0_3">0-3</string>
 </resources>

@@ -25,9 +25,11 @@
         <activity android:name=".NBalance" />
         <activity android:name=".CCalcium" />
         <activity android:name=".AdjBodyWeight" />
+        <activity android:name=".GramsOunces" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".BodyFatPercent" />
-        <activity android:name=".Schofield">
+        <activity android:name=".Schofield" />
+        <activity android:name=".WHO">
         </activity>
     </application>
 

@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean showNB = true;
     private boolean showVitD = true;
     private boolean showABW = true;
+    private boolean showWHO = true;
+    private boolean showGmOz = true;
     private boolean showSchofield = true;
     public static final String MyPREFERENCES = "MyPrefs";
     //TODO: Create visibility function
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         showVitD = sharedpreferences.getBoolean("VitDKey",false);
         showABW = sharedpreferences.getBoolean("ABWKey",false); // getting boolean
         showSchofield = sharedpreferences.getBoolean("SchofieldKey",false); // getting boolean
+        showWHO = sharedpreferences.getBoolean("WHOKey",false); // getting boolean
+        showGmOz = sharedpreferences.getBoolean("GmOzKey",false); // getting boolean
 
             Button bmrButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.bmrButton);
         if(!showBMR) {
@@ -186,6 +190,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button whoButton = (Button) findViewById(R.id.whoBtn);
+        if(!showWHO) {
+            whoButton.setVisibility(View.GONE);
+        }
+        whoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), WHO.class);
+                startActivity(intent);
+            }
+        });
+
+        Button gramsOZButton = (Button) findViewById(R.id.gramsOZBtn);
+        if(!showGmOz) {
+             gramsOZButton.setVisibility(View.GONE);
+        }
+        gramsOZButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), GramsOunces.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

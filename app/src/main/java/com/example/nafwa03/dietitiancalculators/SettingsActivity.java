@@ -27,6 +27,8 @@ public class SettingsActivity extends AppCompatActivity {
     Switch mOnOffIBW;
     Switch mOnOffNB;
     Switch mOnOffABW;
+    Switch mOnOffWHO;
+    Switch mOnOffGmOz;
 	Button mSubmitBtn;
 
 	public static final String MyPREFERENCES = "MyPrefs";
@@ -42,6 +44,8 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String OnOffIBW = "IBWKey";
     public static final String OnOffVitD = "VitDKey";
     public static final String OnOffABW = "ABWKey";
+    public static final String OnOffWHO = "WHOKey";
+    public static final String OnOffGmOz = "GmOzKey";
     public static final String OnOffMifflin = "MifflinKey";
     public static final String OnOffSchofield = "SchofieldKey";
 
@@ -76,6 +80,8 @@ public class SettingsActivity extends AppCompatActivity {
         mOnOffIBW = (Switch) findViewById(R.id.onOffIBW);
         mOnOffVitD = (Switch) findViewById(R.id.onOffVitD);
         mOnOffABW = (Switch) findViewById(R.id.onOffadjBW);
+        mOnOffWHO = (Switch) findViewById(R.id.onOffWHO);
+        mOnOffGmOz = (Switch) findViewById(R.id.onOffGramsOZ);
         /*
         Step 3 : Get data from sharedpreference
           sharedpreferences.getString() method should be used to get the values for corresponding keys as shown below
@@ -113,6 +119,12 @@ public class SettingsActivity extends AppCompatActivity {
         }
         if (sharedpreferences.contains(String.valueOf(OnOffSchofield))) {
             mOnOffSchofield.setChecked(sharedpreferences.getBoolean(OnOffSchofield, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffWHO))) {
+            mOnOffWHO.setChecked(sharedpreferences.getBoolean(OnOffWHO, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffGmOz))) {
+            mOnOffGmOz.setChecked(sharedpreferences.getBoolean(OnOffGmOz, false));
         }
 		/*
 		if (sharedpreferences.contains(Email)) {
@@ -155,6 +167,8 @@ public class SettingsActivity extends AppCompatActivity {
                 Boolean onoffVitD = mOnOffVitD.isChecked();
                 Boolean onoffABW = mOnOffABW.isChecked();
                 Boolean onoffSchofield = mOnOffSchofield.isChecked();
+                Boolean onoffWHO = mOnOffWHO.isChecked();
+                Boolean onoffGmOz = mOnOffGmOz.isChecked();
                 /*
                 Step 2 : Save object to sharedpreferences
          We can save data to sharedpreferences using SharedPreferences.Editor class, for which we need to use edit method of the shared preference.
@@ -176,6 +190,8 @@ public class SettingsActivity extends AppCompatActivity {
                 editor.putBoolean(OnOffMifflin, onoffMifflin);
                 editor.putBoolean(OnOffABW, onoffABW);
                 editor.putBoolean(OnOffSchofield, onoffSchofield);
+                editor.putBoolean(OnOffWHO, onoffWHO);
+                editor.putBoolean(OnOffGmOz, onoffGmOz);
 				//editor.putString(ConfirmPassword, cpw);
 				editor.apply();
 

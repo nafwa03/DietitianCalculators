@@ -112,11 +112,17 @@
             android:text="@string/schofield_equation" />
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/whoBtn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Button" />
+            android:text="@string/world_health_organization_equation" />
+        <Button
+            android:id="@+id/gramsOZBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/grams_ounce_conversion" />
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>
