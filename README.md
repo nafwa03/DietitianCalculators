@@ -29,6 +29,10 @@ Adjusted Body Weight
 <br>
 Schofield Equation
 <br>
+World Health Organization Equation for Children
+<br>
+Grams/Ounce Conversion
+<br>
 
 Upcoming:
 BSA,
