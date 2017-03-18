@@ -17,6 +17,8 @@ Mifflin St Jeor
 <br>
 Milligrams to mEq
 <br>
+mEq to Milligrams
+<br>
 Hamwi Ideal Body Weight (IBW)
 <br>
 Corrected Calcium
