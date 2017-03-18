@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean showCS = true;
     private boolean showMifflin = true;
     private boolean showMilligram = true;
+    private boolean showMilliequivalent = true;
     private boolean showCC = true;
     private boolean showIBW = true;
     private boolean showNB = true;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         showMifflin = sharedpreferences.getBoolean("MifflinKey",false); // getting boolean
         showCC = sharedpreferences.getBoolean("CCKey",false);
         showMilligram = sharedpreferences.getBoolean("MilligramKey",false);
+        showMilliequivalent = sharedpreferences.getBoolean("MilliequivalentKey",false);
         showIBW = sharedpreferences.getBoolean("IBWKey",false);
         showNB = sharedpreferences.getBoolean("NBKey",false);
         showVitD = sharedpreferences.getBoolean("VitDKey",false);
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         showWHO = sharedpreferences.getBoolean("WHOKey",false); // getting boolean
         showGmOz = sharedpreferences.getBoolean("GmOzKey",false); // getting boolean
 
-            Button bmrButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.bmrButton);
+            Button bmrButton = (Button) findViewById(R.id.bmrButton);
         if(!showBMR) {
             bmrButton.setVisibility(View.GONE);
         }
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Button bmiButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.bmiButton);
+            Button bmiButton = (Button) findViewById(R.id.bmiButton);
         if(!showBMI) {
             bmiButton.setVisibility(View.GONE);
         }
@@ -74,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-        Button bfButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.bfButton);
+        Button bfButton = (Button) findViewById(R.id.bfButton);
         bfButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button mifflinButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mifflinBtn);
+        Button mifflinButton = (Button) findViewById(R.id.mifflinBtn);
         if(!showMifflin) {
             mifflinButton.setVisibility(View.GONE);
         }
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button cSodiumButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.cSodiumButton);
+        Button cSodiumButton = (Button) findViewById(R.id.cSodiumButton);
         if(!showCS) {
             cSodiumButton.setVisibility(View.GONE);
         }
@@ -107,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button milligramButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.milligramBtn);
+        Button milligramButton = (Button) findViewById(R.id.milligramBtn);
         if(!showMilligram) {
             milligramButton.setVisibility(View.GONE);
         }
@@ -119,7 +121,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button cCalciumButton = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.ccalciumBtn);
+        Button milliequivalentButton = (Button) findViewById(R.id.milliequivalentBtn);
+        if(!showMilliequivalent) {
+            milliequivalentButton.setVisibility(View.GONE);
+        }
+        milliequivalentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Milliequivalent.class);
+                startActivity(intent);
+            }
+        });
+
+        Button cCalciumButton = (Button) findViewById(R.id.ccalciumBtn);
         if(!showCC) {
             cCalciumButton.setVisibility(View.GONE);
         }

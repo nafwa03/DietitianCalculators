@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-public class Milligram extends AppCompatActivity {
+public class Milliequivalent extends AppCompatActivity {
 
     private EditText calcium;
     private TextView calcium_result;
@@ -37,14 +37,14 @@ public class Milligram extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.example.nafwa03.dietitiancalculators.R.layout.activity_mg_to_meq);
+        setContentView(R.layout.activity_meq_to_mg);
         //TODO: Add switch for TextWatcher
 
-        btnClear = (Button) findViewById(com.example.nafwa03.dietitiancalculators.R.id.clear);
+        btnClear = (Button) findViewById(R.id.clear);
 
-        calcium = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgCalcium);
+        calcium = (EditText) findViewById(R.id.mgCalcium);
 
-        calcium_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqCalcium);
+        calcium_result = (TextView) findViewById(R.id.mEqCalcium);
         calcium.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -62,8 +62,8 @@ public class Milligram extends AppCompatActivity {
             }
         });
 
-        chlorine = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgChlorine);
-        chlorine_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqChlorine);
+        chlorine = (EditText) findViewById(R.id.mgChlorine);
+        chlorine_result = (TextView) findViewById(R.id.mEqChlorine);
         chlorine.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -80,8 +80,8 @@ public class Milligram extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
-        magnesium = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgMagnesium);
-        magnesium_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqMagnesium);
+        magnesium = (EditText) findViewById(R.id.mgMagnesium);
+        magnesium_result = (TextView) findViewById(R.id.mEqMagnesium);
         magnesium.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -98,8 +98,8 @@ public class Milligram extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
-        phosphorus = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgPhosphorus);
-        phosphorus_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqPhosphorus);
+        phosphorus = (EditText) findViewById(R.id.mgPhosphorus);
+        phosphorus_result = (TextView) findViewById(R.id.mEqPhosphorus);
         phosphorus.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -117,8 +117,8 @@ public class Milligram extends AppCompatActivity {
             }
         });
 
-        potassium = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgPotassium);
-        potassium_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqPotassium);
+        potassium = (EditText) findViewById(R.id.mgPotassium);
+        potassium_result = (TextView) findViewById(R.id.mEqPotassium);
         potassium.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -136,8 +136,8 @@ public class Milligram extends AppCompatActivity {
             }
         });
 
-        sodium = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgSodium);
-        sodium_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqSodium);
+        sodium = (EditText) findViewById(R.id.mgSodium);
+        sodium_result = (TextView) findViewById(R.id.mEqSodium);
         sodium.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -155,8 +155,8 @@ public class Milligram extends AppCompatActivity {
             }
         });
 
-        sulfur = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgSulfur);
-        sulfur_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqSulfur);
+        sulfur = (EditText) findViewById(R.id.mgSulfur);
+        sulfur_result = (TextView) findViewById(R.id.mEqSulfur);
         sulfur.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -174,8 +174,8 @@ public class Milligram extends AppCompatActivity {
             }
         });
 
-        sulfate = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgSulfate);
-        sulfate_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqSulfate);
+        sulfate = (EditText) findViewById(R.id.mgSulfate);
+        sulfate_result = (TextView) findViewById(R.id.mEqSulfate);
         sulfate.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -193,8 +193,8 @@ public class Milligram extends AppCompatActivity {
             }
         });
 
-        zinc = (EditText) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mgZinc);
-        zinc_result = (TextView) findViewById(com.example.nafwa03.dietitiancalculators.R.id.mEqZinc);
+        zinc = (EditText) findViewById(R.id.mgZinc);
+        zinc_result = (TextView) findViewById(R.id.mEqZinc);
         zinc.addTextChangedListener(new TextWatcher() {
 
             public void beforeTextChanged(CharSequence s, int start, int count,
@@ -214,19 +214,19 @@ public class Milligram extends AppCompatActivity {
 
         btnClear.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                clearAll((ViewGroup) findViewById(com.example.nafwa03.dietitiancalculators.R.id.tableLayout1));
+                clearAll((ViewGroup) findViewById(R.id.tableLayout1));
             }
         });
     }
 
     public String calculateValence(String mineral, double atomic_weight, int valence ) {
-        double milligram = 0;
+        double mEq = 0;
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
         String formatted;
         if (mineral.toString() != "" && mineral.toString().length() > 0) {
-            milligram = Double.parseDouble(mineral.toString());
+            mEq = Double.parseDouble(mineral.toString());
         }
-            formatted = decimalFormat.format(milligram / atomic_weight * valence);
+            formatted = decimalFormat.format(mEq * atomic_weight / valence);
         return formatted;
            // return Integer.toString((int) (milligram / atomic_weight * valence));
     }

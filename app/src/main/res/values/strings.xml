@@ -94,4 +94,5 @@
     <string name="amount">Amount</string>
     <string name="world_health_organization_equation">World Health Organization Equation</string>
     <string name="_0_3">0-3</string>
+    <string name="meq_to_milligram">mEq to Milligram</string>
 </resources>

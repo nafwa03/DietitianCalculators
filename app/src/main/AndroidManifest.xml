@@ -21,6 +21,7 @@
         <activity android:name=".BMR" />
         <activity android:name=".Mifflin" />
         <activity android:name=".Milligram" />
+        <activity android:name=".Milliequivalent" />
         <activity android:name=".CSodium" />
         <activity android:name=".NBalance" />
         <activity android:name=".CCalcium" />

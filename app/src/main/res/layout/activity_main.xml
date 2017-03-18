@@ -68,7 +68,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/milligram_to_meq" />
-
+        <Button
+            android:id="@+id/milliequivalentBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/meq_to_milligram" />
         <Button
             android:id="@+id/hamwiBtn"
             android:layout_width="fill_parent"

@@ -22,6 +22,7 @@ public class SettingsActivity extends AppCompatActivity {
     Switch mOnOffMifflin;
     Switch mOnOffSchofield;
     Switch mOnOffMilligram;
+    Switch mOnOffMilliequivalent;
     Switch mOnOffCC;
     Switch mOnOffVitD;
     Switch mOnOffIBW;
@@ -39,7 +40,8 @@ public class SettingsActivity extends AppCompatActivity {
     public static final String OnOffBMR = "BMRKey";
     public static final String OnOffCS = "CSKey";
     public static final String OnOffCC = "CCKey";
-    public static final String OnOffmeq = "MilligramKey";
+    public static final String OnOffmg_to_meq = "MilligramKey";
+    public static final String OnOffmeq_to_mg = "MilliequivalentKey";
     public static final String OnOffNB = "NBKey";
     public static final String OnOffIBW = "IBWKey";
     public static final String OnOffVitD = "VitDKey";
@@ -75,7 +77,8 @@ public class SettingsActivity extends AppCompatActivity {
         mOnOffMifflin = (Switch) findViewById(R.id.onOffMifflin);
         mOnOffSchofield = (Switch) findViewById(R.id.onOffSchofield);
         mOnOffCC = (Switch) findViewById(R.id.onOffCC);
-        mOnOffMilligram = (Switch) findViewById(R.id.onOffmeq);
+        mOnOffMilligram = (Switch) findViewById(R.id.onOffmg_to_meq);
+        mOnOffMilliequivalent = (Switch) findViewById(R.id.onOffmeq_to_mg);
         mOnOffNB = (Switch) findViewById(R.id.onOffNB);
         mOnOffIBW = (Switch) findViewById(R.id.onOffIBW);
         mOnOffVitD = (Switch) findViewById(R.id.onOffVitD);
@@ -99,8 +102,11 @@ public class SettingsActivity extends AppCompatActivity {
         if (sharedpreferences.contains(String.valueOf(OnOffCC))) {
             mOnOffCC.setChecked(sharedpreferences.getBoolean(OnOffCC, false));
         }
-        if (sharedpreferences.contains(String.valueOf(OnOffmeq))) {
-            mOnOffMilligram.setChecked(sharedpreferences.getBoolean(OnOffmeq, false));
+        if (sharedpreferences.contains(String.valueOf(OnOffmg_to_meq))) {
+            mOnOffMilligram.setChecked(sharedpreferences.getBoolean(OnOffmg_to_meq, false));
+        }
+        if (sharedpreferences.contains(String.valueOf(OnOffmeq_to_mg))) {
+            mOnOffMilliequivalent.setChecked(sharedpreferences.getBoolean(OnOffmeq_to_mg, false));
         }
         if (sharedpreferences.contains(String.valueOf(OnOffNB))) {
             mOnOffNB.setChecked(sharedpreferences.getBoolean(OnOffNB, false));
@@ -162,6 +168,7 @@ public class SettingsActivity extends AppCompatActivity {
                 Boolean onoffMifflin = mOnOffMifflin.isChecked();
                 Boolean onoffCC = mOnOffCC.isChecked();
                 Boolean onoffMilligram = mOnOffMilligram.isChecked();
+                Boolean onoffMilliequivalent = mOnOffMilliequivalent.isChecked();
                 Boolean onoffIBW = mOnOffIBW.isChecked();
                 Boolean onoffNB = mOnOffNB.isChecked();
                 Boolean onoffVitD = mOnOffVitD.isChecked();
@@ -183,7 +190,8 @@ public class SettingsActivity extends AppCompatActivity {
                 editor.putBoolean(OnOffBMR, onoffBMR);
                 editor.putBoolean(OnOffCS, onoffCS);
                 editor.putBoolean(OnOffCC, onoffCC);
-                editor.putBoolean(OnOffmeq, onoffMilligram);
+                editor.putBoolean(OnOffmg_to_meq, onoffMilligram);
+                editor.putBoolean(OnOffmeq_to_mg, onoffMilliequivalent);
                 editor.putBoolean(OnOffNB, onoffNB);
                 editor.putBoolean(OnOffIBW, onoffIBW);
                 editor.putBoolean(OnOffVitD, onoffVitD);
